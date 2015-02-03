@@ -62,6 +62,7 @@ struct data_thing* stack_reference_scope_creator(){
 
 void stack_reference_scope_example(){
     struct data_thing* data = stack_reference_scope_creator();
+    //  Both of these values will be obliterated
     data->counter++;
     data->modified_by = (char*)__func__;
     print_data_thing("Received Reference", data);
