@@ -1,4 +1,5 @@
 # Call Stacks and System Calls
+In this section we'll continue where Vikram left off last week and cover some more detail on how programs execute and how memory works. We'll talk about how memory is laid out in a running process and the basics of OS / process interaction. The best guide I've been able to find that generally covers most of these topics can be found [here](http://duartes.org/gustavo/blog/post/anatomy-of-a-program-in-memory/).
 
 ## Call Stacks
 stacks.c defines some functions to demonstrate some characteristics of the call stack. To note:

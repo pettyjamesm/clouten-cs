@@ -28,7 +28,7 @@ int measure_stack_size(int call, int last_location){
  * 1000 times.
  */
 int overflow_stack_allocation(int call){
-    char some_large_buffer[2048];
+    char some_large_buffer[2048];   //  Note this large buffer allocation on stack
     int some_value       = 0;
     int current_location = (int)&some_value;
 
@@ -64,10 +64,10 @@ int overflow_heap_allocation(int call){
  * then recursively calls itself until the program runs out of memory or is killed.
  */
 void heap_exhaustion_example(){
-    // 10 MB allocation
-    size_t buffer_size = 1024 * 1024 * 10;
+    size_t buffer_size = 10000000;
     int* big_buffer;
 
+    // ~ 40 MB allocation (10,000,000 * 4 bytes)
     big_buffer = (int*)malloc(buffer_size * sizeof(int));
     if (big_buffer == NULL){
         perror("Failed to allocate enough memory");
