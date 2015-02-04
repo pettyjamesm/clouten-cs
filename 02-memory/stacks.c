@@ -103,6 +103,8 @@ int main(int argc, char** argv){
             {4, "Heap Exhaustion"},
     };
 
+    printf("Current PID: %d\n", getpid());
+
     int option_count = sizeof(options) / sizeof(struct example);
 
     switch (parse_example_input(option_count, options)){

@@ -18,5 +18,4 @@ Useful information about the syscall() function exists in the [syscall man page]
 
 Things to keep in mind:
 - Programs run in a sandbox and (generally) don't have direct access to the hardware
-- The OS kernel defines the interface with hardware and programs have to use the interface provided to do things like reading / writing to files
-- The kernel and your program do not share logical memory space. That is to say, your program can't directly read or write to memory owned by the kernel
+- The OS kernel defines the interface with hardware and programs have to use the interface provided to do things like reading / writing to files. The wikipedia article gives some more detailed examples
