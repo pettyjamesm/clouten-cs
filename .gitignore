@@ -1,5 +1,6 @@
 bin/
 .idea/
 .DS_Store
+cmake_install.cmake
 CMakeFiles/
 CMakeCache.txt

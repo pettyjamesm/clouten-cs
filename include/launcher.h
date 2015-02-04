@@ -22,7 +22,7 @@ int parse_example_input(const size_t option_size, const struct example* options)
     buffer[length] = '\0';
 
     int read_value = atoi(buffer);
-    for (int i = 0; i < sizeof(options) / sizeof(struct example); i++){
+    for (int i = 0; i < option_size; i++){
         struct example current = options[i];
         if (current.value == read_value){
             printf("Launching %s\n", current.name);
