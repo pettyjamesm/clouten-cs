@@ -43,10 +43,10 @@ RM = /opt/local/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/jpetty/Documents/clion/clouton-cs/02-memory
+CMAKE_SOURCE_DIR = /Users/jpetty/Documents/clion/clouten-cs
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/jpetty/Documents/clion/clouton-cs/02-memory
+CMAKE_BINARY_DIR = /Users/jpetty/Documents/clion/clouten-cs
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -73,14 +73,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/jpetty/Documents/clion/clouton-cs/02-memory/CMakeFiles /Users/jpetty/Documents/clion/clouton-cs/02-memory/CMakeFiles/progress.marks
-	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/jpetty/Documents/clion/clouton-cs/02-memory/CMakeFiles 0
+	cd /Users/jpetty/Documents/clion/clouten-cs && $(CMAKE_COMMAND) -E cmake_progress_start /Users/jpetty/Documents/clion/clouten-cs/CMakeFiles /Users/jpetty/Documents/clion/clouten-cs/02-memory/CMakeFiles/progress.marks
+	cd /Users/jpetty/Documents/clion/clouten-cs && $(MAKE) -f CMakeFiles/Makefile2 02-memory/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/jpetty/Documents/clion/clouten-cs/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	$(MAKE) -f CMakeFiles/Makefile2 clean
+	cd /Users/jpetty/Documents/clion/clouten-cs && $(MAKE) -f CMakeFiles/Makefile2 02-memory/clean
 .PHONY : clean
 
 # The main clean target
@@ -89,56 +89,59 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	$(MAKE) -f CMakeFiles/Makefile2 preinstall
+	cd /Users/jpetty/Documents/clion/clouten-cs && $(MAKE) -f CMakeFiles/Makefile2 02-memory/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	$(MAKE) -f CMakeFiles/Makefile2 preinstall
+	cd /Users/jpetty/Documents/clion/clouten-cs && $(MAKE) -f CMakeFiles/Makefile2 02-memory/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	$(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /Users/jpetty/Documents/clion/clouten-cs && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
-#=============================================================================
-# Target rules for targets named stacks
+# Convenience name for target.
+02-memory/CMakeFiles/stacks.dir/rule:
+	cd /Users/jpetty/Documents/clion/clouten-cs && $(MAKE) -f CMakeFiles/Makefile2 02-memory/CMakeFiles/stacks.dir/rule
+.PHONY : 02-memory/CMakeFiles/stacks.dir/rule
 
-# Build rule for target.
-stacks: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 stacks
+# Convenience name for target.
+stacks: 02-memory/CMakeFiles/stacks.dir/rule
 .PHONY : stacks
 
 # fast build rule for target.
 stacks/fast:
-	$(MAKE) -f CMakeFiles/stacks.dir/build.make CMakeFiles/stacks.dir/build
+	cd /Users/jpetty/Documents/clion/clouten-cs && $(MAKE) -f 02-memory/CMakeFiles/stacks.dir/build.make 02-memory/CMakeFiles/stacks.dir/build
 .PHONY : stacks/fast
 
-#=============================================================================
-# Target rules for targets named system_calls
+# Convenience name for target.
+02-memory/CMakeFiles/system_calls.dir/rule:
+	cd /Users/jpetty/Documents/clion/clouten-cs && $(MAKE) -f CMakeFiles/Makefile2 02-memory/CMakeFiles/system_calls.dir/rule
+.PHONY : 02-memory/CMakeFiles/system_calls.dir/rule
 
-# Build rule for target.
-system_calls: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 system_calls
+# Convenience name for target.
+system_calls: 02-memory/CMakeFiles/system_calls.dir/rule
 .PHONY : system_calls
 
 # fast build rule for target.
 system_calls/fast:
-	$(MAKE) -f CMakeFiles/system_calls.dir/build.make CMakeFiles/system_calls.dir/build
+	cd /Users/jpetty/Documents/clion/clouten-cs && $(MAKE) -f 02-memory/CMakeFiles/system_calls.dir/build.make 02-memory/CMakeFiles/system_calls.dir/build
 .PHONY : system_calls/fast
 
-#=============================================================================
-# Target rules for targets named value_and_reference
+# Convenience name for target.
+02-memory/CMakeFiles/value_and_reference.dir/rule:
+	cd /Users/jpetty/Documents/clion/clouten-cs && $(MAKE) -f CMakeFiles/Makefile2 02-memory/CMakeFiles/value_and_reference.dir/rule
+.PHONY : 02-memory/CMakeFiles/value_and_reference.dir/rule
 
-# Build rule for target.
-value_and_reference: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 value_and_reference
+# Convenience name for target.
+value_and_reference: 02-memory/CMakeFiles/value_and_reference.dir/rule
 .PHONY : value_and_reference
 
 # fast build rule for target.
 value_and_reference/fast:
-	$(MAKE) -f CMakeFiles/value_and_reference.dir/build.make CMakeFiles/value_and_reference.dir/build
+	cd /Users/jpetty/Documents/clion/clouten-cs && $(MAKE) -f 02-memory/CMakeFiles/value_and_reference.dir/build.make 02-memory/CMakeFiles/value_and_reference.dir/build
 .PHONY : value_and_reference/fast
 
 stacks.o: stacks.c.o
@@ -146,7 +149,7 @@ stacks.o: stacks.c.o
 
 # target to build an object file
 stacks.c.o:
-	$(MAKE) -f CMakeFiles/stacks.dir/build.make CMakeFiles/stacks.dir/stacks.c.o
+	cd /Users/jpetty/Documents/clion/clouten-cs && $(MAKE) -f 02-memory/CMakeFiles/stacks.dir/build.make 02-memory/CMakeFiles/stacks.dir/stacks.c.o
 .PHONY : stacks.c.o
 
 stacks.i: stacks.c.i
@@ -154,7 +157,7 @@ stacks.i: stacks.c.i
 
 # target to preprocess a source file
 stacks.c.i:
-	$(MAKE) -f CMakeFiles/stacks.dir/build.make CMakeFiles/stacks.dir/stacks.c.i
+	cd /Users/jpetty/Documents/clion/clouten-cs && $(MAKE) -f 02-memory/CMakeFiles/stacks.dir/build.make 02-memory/CMakeFiles/stacks.dir/stacks.c.i
 .PHONY : stacks.c.i
 
 stacks.s: stacks.c.s
@@ -162,7 +165,7 @@ stacks.s: stacks.c.s
 
 # target to generate assembly for a file
 stacks.c.s:
-	$(MAKE) -f CMakeFiles/stacks.dir/build.make CMakeFiles/stacks.dir/stacks.c.s
+	cd /Users/jpetty/Documents/clion/clouten-cs && $(MAKE) -f 02-memory/CMakeFiles/stacks.dir/build.make 02-memory/CMakeFiles/stacks.dir/stacks.c.s
 .PHONY : stacks.c.s
 
 system_calls.o: system_calls.c.o
@@ -170,7 +173,7 @@ system_calls.o: system_calls.c.o
 
 # target to build an object file
 system_calls.c.o:
-	$(MAKE) -f CMakeFiles/system_calls.dir/build.make CMakeFiles/system_calls.dir/system_calls.c.o
+	cd /Users/jpetty/Documents/clion/clouten-cs && $(MAKE) -f 02-memory/CMakeFiles/system_calls.dir/build.make 02-memory/CMakeFiles/system_calls.dir/system_calls.c.o
 .PHONY : system_calls.c.o
 
 system_calls.i: system_calls.c.i
@@ -178,7 +181,7 @@ system_calls.i: system_calls.c.i
 
 # target to preprocess a source file
 system_calls.c.i:
-	$(MAKE) -f CMakeFiles/system_calls.dir/build.make CMakeFiles/system_calls.dir/system_calls.c.i
+	cd /Users/jpetty/Documents/clion/clouten-cs && $(MAKE) -f 02-memory/CMakeFiles/system_calls.dir/build.make 02-memory/CMakeFiles/system_calls.dir/system_calls.c.i
 .PHONY : system_calls.c.i
 
 system_calls.s: system_calls.c.s
@@ -186,7 +189,7 @@ system_calls.s: system_calls.c.s
 
 # target to generate assembly for a file
 system_calls.c.s:
-	$(MAKE) -f CMakeFiles/system_calls.dir/build.make CMakeFiles/system_calls.dir/system_calls.c.s
+	cd /Users/jpetty/Documents/clion/clouten-cs && $(MAKE) -f 02-memory/CMakeFiles/system_calls.dir/build.make 02-memory/CMakeFiles/system_calls.dir/system_calls.c.s
 .PHONY : system_calls.c.s
 
 value_and_reference.o: value_and_reference.c.o
@@ -194,7 +197,7 @@ value_and_reference.o: value_and_reference.c.o
 
 # target to build an object file
 value_and_reference.c.o:
-	$(MAKE) -f CMakeFiles/value_and_reference.dir/build.make CMakeFiles/value_and_reference.dir/value_and_reference.c.o
+	cd /Users/jpetty/Documents/clion/clouten-cs && $(MAKE) -f 02-memory/CMakeFiles/value_and_reference.dir/build.make 02-memory/CMakeFiles/value_and_reference.dir/value_and_reference.c.o
 .PHONY : value_and_reference.c.o
 
 value_and_reference.i: value_and_reference.c.i
@@ -202,7 +205,7 @@ value_and_reference.i: value_and_reference.c.i
 
 # target to preprocess a source file
 value_and_reference.c.i:
-	$(MAKE) -f CMakeFiles/value_and_reference.dir/build.make CMakeFiles/value_and_reference.dir/value_and_reference.c.i
+	cd /Users/jpetty/Documents/clion/clouten-cs && $(MAKE) -f 02-memory/CMakeFiles/value_and_reference.dir/build.make 02-memory/CMakeFiles/value_and_reference.dir/value_and_reference.c.i
 .PHONY : value_and_reference.c.i
 
 value_and_reference.s: value_and_reference.c.s
@@ -210,7 +213,7 @@ value_and_reference.s: value_and_reference.c.s
 
 # target to generate assembly for a file
 value_and_reference.c.s:
-	$(MAKE) -f CMakeFiles/value_and_reference.dir/build.make CMakeFiles/value_and_reference.dir/value_and_reference.c.s
+	cd /Users/jpetty/Documents/clion/clouten-cs && $(MAKE) -f 02-memory/CMakeFiles/value_and_reference.dir/build.make 02-memory/CMakeFiles/value_and_reference.dir/value_and_reference.c.s
 .PHONY : value_and_reference.c.s
 
 # Help Target
@@ -244,6 +247,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	$(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /Users/jpetty/Documents/clion/clouten-cs && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 
