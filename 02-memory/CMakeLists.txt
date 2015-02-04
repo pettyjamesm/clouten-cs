@@ -1,4 +1,4 @@
-set(SOURCE_FILES stacks.c system_calls.c value_and_reference.c)
+set(SOURCE_FILES stacks.c system_calls.c value_and_reference.c ../scratch/scratch.c)
 
 set(EXECUTABLE_OUTPUT_PATH bin/)
 

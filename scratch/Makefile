@@ -73,14 +73,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/jpetty/Documents/clion/clouten-cs/CMakeFiles /Users/jpetty/Documents/clion/clouten-cs/CMakeFiles/progress.marks
-	$(MAKE) -f CMakeFiles/Makefile2 all
+	cd /Users/jpetty/Documents/clion/clouten-cs && $(CMAKE_COMMAND) -E cmake_progress_start /Users/jpetty/Documents/clion/clouten-cs/CMakeFiles /Users/jpetty/Documents/clion/clouten-cs/scratch/CMakeFiles/progress.marks
+	cd /Users/jpetty/Documents/clion/clouten-cs && $(MAKE) -f CMakeFiles/Makefile2 scratch/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/jpetty/Documents/clion/clouten-cs/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	$(MAKE) -f CMakeFiles/Makefile2 clean
+	cd /Users/jpetty/Documents/clion/clouten-cs && $(MAKE) -f CMakeFiles/Makefile2 scratch/clean
 .PHONY : clean
 
 # The main clean target
@@ -89,70 +89,56 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	$(MAKE) -f CMakeFiles/Makefile2 preinstall
+	cd /Users/jpetty/Documents/clion/clouten-cs && $(MAKE) -f CMakeFiles/Makefile2 scratch/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	$(MAKE) -f CMakeFiles/Makefile2 preinstall
+	cd /Users/jpetty/Documents/clion/clouten-cs && $(MAKE) -f CMakeFiles/Makefile2 scratch/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	$(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /Users/jpetty/Documents/clion/clouten-cs && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
-#=============================================================================
-# Target rules for targets named stacks
+# Convenience name for target.
+scratch/CMakeFiles/scratch.dir/rule:
+	cd /Users/jpetty/Documents/clion/clouten-cs && $(MAKE) -f CMakeFiles/Makefile2 scratch/CMakeFiles/scratch.dir/rule
+.PHONY : scratch/CMakeFiles/scratch.dir/rule
 
-# Build rule for target.
-stacks: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 stacks
-.PHONY : stacks
-
-# fast build rule for target.
-stacks/fast:
-	$(MAKE) -f 02-memory/CMakeFiles/stacks.dir/build.make 02-memory/CMakeFiles/stacks.dir/build
-.PHONY : stacks/fast
-
-#=============================================================================
-# Target rules for targets named system_calls
-
-# Build rule for target.
-system_calls: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 system_calls
-.PHONY : system_calls
-
-# fast build rule for target.
-system_calls/fast:
-	$(MAKE) -f 02-memory/CMakeFiles/system_calls.dir/build.make 02-memory/CMakeFiles/system_calls.dir/build
-.PHONY : system_calls/fast
-
-#=============================================================================
-# Target rules for targets named value_and_reference
-
-# Build rule for target.
-value_and_reference: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 value_and_reference
-.PHONY : value_and_reference
-
-# fast build rule for target.
-value_and_reference/fast:
-	$(MAKE) -f 02-memory/CMakeFiles/value_and_reference.dir/build.make 02-memory/CMakeFiles/value_and_reference.dir/build
-.PHONY : value_and_reference/fast
-
-#=============================================================================
-# Target rules for targets named scratch
-
-# Build rule for target.
-scratch: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 scratch
+# Convenience name for target.
+scratch: scratch/CMakeFiles/scratch.dir/rule
 .PHONY : scratch
 
 # fast build rule for target.
 scratch/fast:
-	$(MAKE) -f scratch/CMakeFiles/scratch.dir/build.make scratch/CMakeFiles/scratch.dir/build
+	cd /Users/jpetty/Documents/clion/clouten-cs && $(MAKE) -f scratch/CMakeFiles/scratch.dir/build.make scratch/CMakeFiles/scratch.dir/build
 .PHONY : scratch/fast
+
+scratch.o: scratch.c.o
+.PHONY : scratch.o
+
+# target to build an object file
+scratch.c.o:
+	cd /Users/jpetty/Documents/clion/clouten-cs && $(MAKE) -f scratch/CMakeFiles/scratch.dir/build.make scratch/CMakeFiles/scratch.dir/scratch.c.o
+.PHONY : scratch.c.o
+
+scratch.i: scratch.c.i
+.PHONY : scratch.i
+
+# target to preprocess a source file
+scratch.c.i:
+	cd /Users/jpetty/Documents/clion/clouten-cs && $(MAKE) -f scratch/CMakeFiles/scratch.dir/build.make scratch/CMakeFiles/scratch.dir/scratch.c.i
+.PHONY : scratch.c.i
+
+scratch.s: scratch.c.s
+.PHONY : scratch.s
+
+# target to generate assembly for a file
+scratch.c.s:
+	cd /Users/jpetty/Documents/clion/clouten-cs && $(MAKE) -f scratch/CMakeFiles/scratch.dir/build.make scratch/CMakeFiles/scratch.dir/scratch.c.s
+.PHONY : scratch.c.s
 
 # Help Target
 help:
@@ -162,10 +148,10 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... stacks"
-	@echo "... system_calls"
-	@echo "... value_and_reference"
 	@echo "... scratch"
+	@echo "... scratch.o"
+	@echo "... scratch.i"
+	@echo "... scratch.s"
 .PHONY : help
 
 
@@ -177,6 +163,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	$(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /Users/jpetty/Documents/clion/clouten-cs && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 
